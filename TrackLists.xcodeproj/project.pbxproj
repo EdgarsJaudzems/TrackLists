@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		18A5A32925CAC950000D4E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A32825CAC950000D4E1A /* AppDelegate.swift */; };
 		18A5A32B25CAC950000D4E1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A32A25CAC950000D4E1A /* SceneDelegate.swift */; };
-		18A5A32D25CAC950000D4E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A32C25CAC950000D4E1A /* ViewController.swift */; };
 		18A5A33025CAC950000D4E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A5A32E25CAC950000D4E1A /* Main.storyboard */; };
 		18A5A33225CAC951000D4E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A5A33125CAC951000D4E1A /* Assets.xcassets */; };
 		18A5A33525CAC951000D4E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A5A33325CAC951000D4E1A /* LaunchScreen.storyboard */; };
+		18A5A34425CACAE9000D4E1A /* TrackListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A34325CACAE9000D4E1A /* TrackListTableViewController.swift */; };
+		18A5A34725CACB1A000D4E1A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A34625CACB1A000D4E1A /* DetailViewController.swift */; };
+		18A5A34B25CAD16A000D4E1A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A34A25CAD16A000D4E1A /* Song.swift */; };
+		18A5A34E25CAD202000D4E1A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5A34D25CAD202000D4E1A /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18A5A32525CAC950000D4E1A /* TrackLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A5A32825CAC950000D4E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A5A32A25CAC950000D4E1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18A5A32C25CAC950000D4E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18A5A32F25CAC950000D4E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18A5A33125CAC951000D4E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A5A33425CAC951000D4E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A5A33625CAC951000D4E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A5A34325CACAE9000D4E1A /* TrackListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewController.swift; sourceTree = "<group>"; };
+		18A5A34625CACB1A000D4E1A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18A5A34A25CAD16A000D4E1A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		18A5A34D25CAD202000D4E1A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		18A5A32725CAC950000D4E1A /* TrackLists */ = {
 			isa = PBXGroup;
 			children = (
-				18A5A32825CAC950000D4E1A /* AppDelegate.swift */,
-				18A5A32A25CAC950000D4E1A /* SceneDelegate.swift */,
-				18A5A32C25CAC950000D4E1A /* ViewController.swift */,
-				18A5A32E25CAC950000D4E1A /* Main.storyboard */,
+				18A5A33D25CAC9AC000D4E1A /* Delegate */,
+				18A5A34225CACA23000D4E1A /* ModelManager */,
+				18A5A34125CACA18000D4E1A /* Model */,
+				18A5A33F25CAC9F4000D4E1A /* View */,
+				18A5A34025CACA06000D4E1A /* Controllers */,
 				18A5A33125CAC951000D4E1A /* Assets.xcassets */,
-				18A5A33325CAC951000D4E1A /* LaunchScreen.storyboard */,
 				18A5A33625CAC951000D4E1A /* Info.plist */,
 			);
 			path = TrackLists;
+			sourceTree = "<group>";
+		};
+		18A5A33D25CAC9AC000D4E1A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				18A5A32825CAC950000D4E1A /* AppDelegate.swift */,
+				18A5A32A25CAC950000D4E1A /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		18A5A33F25CAC9F4000D4E1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18A5A32E25CAC950000D4E1A /* Main.storyboard */,
+				18A5A33325CAC951000D4E1A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18A5A34025CACA06000D4E1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18A5A34325CACAE9000D4E1A /* TrackListTableViewController.swift */,
+				18A5A34625CACB1A000D4E1A /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18A5A34125CACA18000D4E1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A5A34A25CAD16A000D4E1A /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A5A34225CACA23000D4E1A /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				18A5A34D25CAD202000D4E1A /* DataManager.swift */,
+			);
+			path = ModelManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A5A32D25CAC950000D4E1A /* ViewController.swift in Sources */,
 				18A5A32925CAC950000D4E1A /* AppDelegate.swift in Sources */,
+				18A5A34E25CAD202000D4E1A /* DataManager.swift in Sources */,
 				18A5A32B25CAC950000D4E1A /* SceneDelegate.swift in Sources */,
+				18A5A34425CACAE9000D4E1A /* TrackListTableViewController.swift in Sources */,
+				18A5A34725CACB1A000D4E1A /* DetailViewController.swift in Sources */,
+				18A5A34B25CAD16A000D4E1A /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
